@@ -16,6 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -77,7 +78,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 CORS_ALLOW_ALL_ORIGINS = True  # Or restrict by domain
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'media'  # which will now be: backend/media/
+
 
 
 # Database
