@@ -3,7 +3,7 @@ import { getScans } from '../api';
 import ScanCard from '../components/ScanCard';
 import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters';
-import DetailModal from '../components/DetailModal';
+import DetailModel from '../components/DetailModel';
 
 function Home() {
   const [scans, setScans] = useState([]);
@@ -29,7 +29,7 @@ function Home() {
           <ScanCard key={scan.id} scan={scan} onClick={setSelectedScan} />
         ))}
       </div>
-      <DetailModal scan={selectedScan} onClose={() => setSelectedScan(null)} />
+      <DetailModel scan={selectedScan} onClose={() => setSelectedScan(null)} />
     </div>
   );
 }
