@@ -1,5 +1,3 @@
-import React from 'react';
-// import './ScanCard.css';
 
 function ScanCard({ scan, onClick }) {
   return (
