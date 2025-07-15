@@ -6,3 +6,4 @@ const API = axios.create({
 
 export const getScans = (params) => API.get('/scans/', { params });
 export const uploadScan = (data) => API.post('/scans/', data);
+export const getScanById = (id) => API.get(`/scans/${id}/`);

@@ -13,8 +13,12 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await getScans({ search: query, ...filters });
-      setScans(response.data);
+      try {
+        const response = await getScans({ search: query, ...filters });
+        setScans(response.data);
+      } catch (error) {
+        console.error('Failed to fetch scans', error);
+      }
     };
     fetchData();
   }, [query, filters]);
